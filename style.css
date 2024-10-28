@@ -1,0 +1,123 @@
+*, 
+*::before,S
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    background-color: #132847;
+    color: white;
+    min-height: 100vh;
+}
+
+
+input, button {
+    outline: 0;
+    border: 0;
+}
+
+.container {
+    width: calc(100% - 32px);
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+header.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+header.header > h1.header__title {
+    font-size: clamp(2.25rem, 1.8rem + 1.8vw, 2.8125rem);
+    font-weight: 700; 
+    color: red;
+}
+
+header.header > div.header__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+header.header > div.header__search > input.header__search-input {
+    flex: 1;
+    height: 45px;
+    padding-left: 18px;
+    font-size: 1.125rem;
+    border-radius: 24px;
+    background-color: red;
+}
+
+header.header > div.header__search > input.header__search-input::placeholder {
+    color: black;
+}
+
+header.header > div.header__search > button.header__search-button {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    background: transparent;
+    padding: 12px 15px 12px 15px;
+    border-radius: 0px 22px 22px 0px;
+}
+
+header.header > div.header__search > button.header__search-button img {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+main.word > h1.word {
+    font-size: 2rem;
+}
+
+main.word > h3.phonetic {
+    font-size: 1.5rem;
+    padding-bottom: 0.80rem;
+} 
+
+main.word > h4 {
+    font-size: 1.2rem;
+    padding-bottom: 0.80rem;
+} 
+
+main.word >  {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+} 
+
+main.word > section.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    gap: 12px;
+}
+
+main.word > section.error > img {
+    width: 200px;
+    height: 200px;
+}
+
+main.word > section.error > h1.error__message {
+    text-align: center;
+    font-size: clamp(1.375rem, 0.875rem + 2vw, 1.75rem);
+}
